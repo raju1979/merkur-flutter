@@ -1,0 +1,32 @@
+[
+  {
+    "sender": "John Doe",
+    "message": "Hey, how are you doing?",
+    "timestamp": "10:30 AM",
+    "avatarUrl": "https://i.pravatar.cc/150?img=1"
+  },
+  {
+    "sender": "Jane Smith",
+    "message": "Let's catch up later.",
+    "timestamp": "11:45 AM",
+    "avatarUrl": "https://i.pravatar.cc/150?img=2"
+  },
+  {
+    "sender": "Peter Jones",
+    "message": "Don't forget the meeting at 2 PM.",
+    "timestamp": "12:00 PM",
+    "avatarUrl": "https://i.pravatar.cc/150?img=3"
+  },
+  {
+    "sender": "Mary Williams",
+    "message": "Can you send me the report?",
+    "timestamp": "Yesterday",
+    "avatarUrl": "https://i.pravatar.cc/150?img=4"
+  },
+  {
+    "sender": "David Brown",
+    "message": "Happy Birthday!",
+    "timestamp": "Yesterday",
+    "avatarUrl": "https://i.pravatar.cc/150?img=5"
+  }
+]
