@@ -31,7 +31,8 @@ class AppDrawer extends StatelessWidget {
         '${user.jwtPayload?['firstName'] ?? ''} ${user.jwtPayload?['lastName'] ?? ''}';
 
     return Drawer(
-      child: Column(
+      child: ListView(
+        padding: EdgeInsets.zero,
         children: [
           UserAccountsDrawerHeader(
             accountName: Text(fullName),
@@ -44,52 +45,45 @@ class AppDrawer extends StatelessWidget {
               color: Colors.deepPurple,
             ),
           ),
-          Expanded(
-            child: ListView(
-              padding: EdgeInsets.zero,
-              children: [
-                _createDrawerItem(
-                  icon: Icons.message,
-                  text: 'Messages',
-                  color: _getRandomColor(),
-                  onTap: () {
-                    Navigator.pop(context); // Close the drawer
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => const MessagesPage(),
-                      ),
-                    );
-                  },
+          _createDrawerItem(
+            icon: Icons.message,
+            text: 'Messages',
+            color: _getRandomColor(),
+            onTap: () {
+              Navigator.pop(context); // Close the drawer
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const MessagesPage(),
                 ),
-                _createDrawerItem(
-                    icon: Icons.quiz,
-                    text: 'QUIZ',
-                    color: _getRandomColor(),
-                    onTap: () {}),
-                _createDrawerItem(
-                    icon: Icons.description,
-                    text: 'Papers',
-                    color: _getRandomColor(),
-                    onTap: () {}),
-                _createDrawerItem(
-                    icon: Icons.picture_as_pdf,
-                    text: 'PDF',
-                    color: _getRandomColor(),
-                    onTap: () {}),
-                _createDrawerItem(
-                    icon: Icons.work,
-                    text: 'Jobs',
-                    color: _getRandomColor(),
-                    onTap: () {}),
-                _createDrawerItem(
-                    icon: Icons.info,
-                    text: 'About',
-                    color: _getRandomColor(),
-                    onTap: () {}),
-              ],
-            ),
+              );
+            },
           ),
+          _createDrawerItem(
+              icon: Icons.quiz,
+              text: 'QUIZ',
+              color: _getRandomColor(),
+              onTap: () {}),
+          _createDrawerItem(
+              icon: Icons.description,
+              text: 'Papers',
+              color: _getRandomColor(),
+              onTap: () {}),
+          _createDrawerItem(
+              icon: Icons.picture_as_pdf,
+              text: 'PDF',
+              color: _getRandomColor(),
+              onTap: () {}),
+          _createDrawerItem(
+              icon: Icons.work,
+              text: 'Jobs',
+              color: _getRandomColor(),
+              onTap: () {}),
+          _createDrawerItem(
+              icon: Icons.info,
+              text: 'About',
+              color: _getRandomColor(),
+              onTap: () {}),
           const Divider(),
           ListTile(
             leading: const Icon(Icons.logout),
